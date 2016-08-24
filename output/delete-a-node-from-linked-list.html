@@ -3,7 +3,7 @@
 <head>
         <meta charset="utf-8" />
         <title>Delete a node from Linked List</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link rel="stylesheet" href="./theme/css/main.css" />
 
         <!--[if IE]>
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -12,17 +12,18 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">AB Log </a></h1>
+                <h1><a href="./">AB Log </a></h1>
                 <nav><ul>
-                    <li class="active"><a href="/category/blog.html">Blog</a></li>
+                    <li class="active"><a href="./category/blog.html">Blog</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="/delete-a-node-from-linked-list.html" rel="bookmark"
+        <a href="./delete-a-node-from-linked-list.html" rel="bookmark"
            title="Permalink to Delete a node from Linked List">Delete a node from Linked List</a></h1>
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="aniruddhabara">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     </header>
 
     <div class="entry-content">
@@ -32,10 +33,10 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="/author/aniruddha-barapatre.html">Aniruddha Barapatre</a>
+                By                         <a class="url fn" href="./author/aniruddha-barapatre.html">Aniruddha Barapatre</a>
         </address>
-<p>In <a href="/category/blog.html">Blog</a>.</p>
-<p>tags: <a href="/tag/cs.html">CS</a> <a href="/tag/data-structures.html">Data structures</a> <a href="/tag/linked-list.html">Linked List</a> </p>
+<p>In <a href="./category/blog.html">Blog</a>.</p>
+<p>tags: <a href="./tag/cs.html">CS</a> <a href="./tag/data-structures.html">Data structures</a> <a href="./tag/linked-list.html">Linked List</a> </p>
 </footer><!-- /.post-info -->      <p><em>Supposed the linked list is 1 -&gt; 2 -&gt; 3 -&gt; 4 and you are given the third node with value 3, the linked list should become 1 -&gt; 2 -&gt; 4 after calling your function.</em></p>
 <p>We can traverse the list from the beginning until we encounter the node to delete. But in this situation, we don't know where the head of the list is, we only have a reference to the node to delete.</p>
 <p>The usual way of deleting a node node from a linked list is to modify the next pointer of the node before it, to point to the node after it.</p>
@@ -59,6 +60,21 @@
 <span class="k">end</span>
 </pre></div>
     </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'pelican-blog';
+        var disqus_identifier = 'delete-a-node-from-linked-list.html';
+        var disqus_url = './delete-a-node-from-linked-list.html';
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//pelican-blog.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the comments.</noscript>
+    </div>
 
   </article>
 </section>
@@ -90,5 +106,14 @@
                 <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
         </footer><!-- /#contentinfo -->
 
+<script type="text/javascript">
+    var disqus_shortname = 'pelican-blog';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 </body>
 </html>

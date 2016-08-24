@@ -3,7 +3,7 @@
 <head>
         <meta charset="utf-8" />
         <title>Hello World</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link rel="stylesheet" href="./theme/css/main.css" />
 
         <!--[if IE]>
             <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -12,17 +12,18 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">AB Log </a></h1>
+                <h1><a href="./">AB Log </a></h1>
                 <nav><ul>
-                    <li class="active"><a href="/category/blog.html">Blog</a></li>
+                    <li class="active"><a href="./category/blog.html">Blog</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="/hello-world.html" rel="bookmark"
+        <a href="./hello-world.html" rel="bookmark"
            title="Permalink to Hello World">Hello World</a></h1>
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="aniruddhabara">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
     </header>
 
     <div class="entry-content">
@@ -32,13 +33,28 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="/author/aniruddha-barapatre.html">Aniruddha Barapatre</a>
+                By                         <a class="url fn" href="./author/aniruddha-barapatre.html">Aniruddha Barapatre</a>
         </address>
-<p>In <a href="/category/blog.html">Blog</a>.</p>
-<p>tags: <a href="/tag/pelican.html">Pelican</a> <a href="/tag/github.html">Github</a> </p>
+<p>In <a href="./category/blog.html">Blog</a>.</p>
+<p>tags: <a href="./tag/pelican.html">Pelican</a> <a href="./tag/github.html">Github</a> </p>
 </footer><!-- /.post-info -->      <p>My first post using Pelican and me being so called dev, what better way to introduce yourself than to write a ‘Hello World’.</p>
 <p>My plans at least for this blog is to continue writing regularly and make it more technical oriented.</p>
     </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'pelican-blog';
+        var disqus_identifier = 'hello-world.html';
+        var disqus_url = './hello-world.html';
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//pelican-blog.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the comments.</noscript>
+    </div>
 
   </article>
 </section>
@@ -70,5 +86,14 @@
                 <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
         </footer><!-- /#contentinfo -->
 
+<script type="text/javascript">
+    var disqus_shortname = 'pelican-blog';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 </body>
 </html>
