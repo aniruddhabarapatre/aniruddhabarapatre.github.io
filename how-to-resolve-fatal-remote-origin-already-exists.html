@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>How to resolve fatal: remote origin already exists</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">AB Log </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/category/blog.html">Blog</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/how-to-resolve-fatal-remote-origin-already-exists.html" rel="bookmark"
+           title="Permalink to How to resolve fatal: remote origin already exists">How to resolve fatal&#58; remote origin already exists</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-06-17T20:24:00-04:00">
+                Published: Wed 17 June 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/aniruddha-barapatre.html">Aniruddha Barapatre</a>
+        </address>
+<p>In <a href="/category/blog.html">Blog</a>.</p>
+<p>tags: <a href="/tag/git.html">Git</a> <a href="/tag/github.html">Github</a> </p>
+</footer><!-- /.post-info -->      <p>The error message indicates, there is already a remote configured with the same name. So you can either add the new remote with a different name or
+update the existing one if you don't need it.</p>
+<p>First of all Github has a good documentation on <a href="https://help.github.com/articles/renaming-a-remote/">renaming a remote</a> to help
+with this issue.</p>
+<p>Check your remote repositories that you're connected to</p>
+<div class="highlight"><pre><span></span>git remote -v
+</pre></div>
+
+
+<p>This should return a list in following format</p>
+<div class="highlight"><pre><span></span>origin  git@github.com:github/git-reference.git (fetch)
+origin  git@github.com:github/git-reference.git (push)
+</pre></div>
+
+
+<p>That might help you figure out what the original 'origin' pointed to.</p>
+<p>At this moment you could follow either of the below methods to resolve this error based on your requirements.</p>
+<ul>
+<li>
+<p>Remove the origin and your new repository as in</p>
+<p>git remote rm origin
+git remote add origin newrepo-url</p>
+</li>
+<li>
+<p>If you want to keep the remote connection that you see with the -v, but still want to follow the workflow without having to remember 'github' (or some other name) for your repo, you can rename your other repository with the command:</p>
+<p>git remote rename [current name] [new name]</p>
+</li>
+</ul>
+<p>as in:</p>
+<div class="highlight"><pre><span></span>git remote rename origin oldreponame
+</pre></div>
+
+
+<p>Once done, you should be able to change origin to new repository with</p>
+<div class="highlight"><pre><span></span>git remote add origin newrepo-url
+</pre></div>
+
+
+<ul>
+<li>
+<p>You could also use a new name for remote url as</p>
+<p>git remote add github newrepo-url</p>
+</li>
+</ul>
+<p>Remember though, everywhere now onwards you'd be using <code>github</code> as your remote name.
+For example <code>git push origin master</code> should now be <code>git push github master</code>.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
