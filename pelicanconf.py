@@ -26,12 +26,15 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('Github', 'https://github.com/aniruddhabarapatre'),
+          ('Twitter', 'https://twitter.com/aniruddhabara'),
+          ('Linkedin', 'https://linkedin.com/in/aniruddhabarapatre'),)
 
 DEFAULT_PAGINATION = 6
 
-THEME = "pelican-elegant"
+# Specify theme
+# THEME = "../pelican-themes/bootstrap"
+# THEME = "pelican-elegant"
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
