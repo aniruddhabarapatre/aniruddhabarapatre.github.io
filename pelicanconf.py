@@ -21,8 +21,7 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('You can modify those links in your config file', '#'),)
+         ('Python.org', 'http://python.org/'),)
 
 # Social widget
 SOCIAL = (('Github', 'https://github.com/aniruddhabarapatre'),
@@ -40,3 +39,6 @@ RELATIVE_URLS = True
 
 TWITTER_USERNAME = "aniruddhabara"
 DISQUS_SITENAME = "pelican-blog"
+# DISQUS_SITENAME = 'pelican-blog.disqus.com'
+# DISQUS_SHORTNAME = 'pelican-blog'
+GOOGLE_ANALYTICS = "UA-83099004-1"
