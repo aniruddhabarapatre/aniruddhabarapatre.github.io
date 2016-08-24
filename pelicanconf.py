@@ -36,4 +36,4 @@ DEFAULT_PAGINATION = 6
 # THEME = "pelican-elegant"
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
