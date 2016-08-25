@@ -1,0 +1,76 @@
+{
+    "pages": [
+        {
+            "title": "Merge two sorted lists", 
+            "text":"Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists. For this we create a dummy head before the new list so that we don&#39;t have to deal with cases for initializing head of new list. Then new list&#39;s head could be returned as dummy head&#39;s next node. # Time complexity: O(n) def merge_two_lists(l1, l2) dummyhead = Node.new(0) p = dummyhead while(!l1.nil? &amp;&amp; !l2.nil?) if (l1.val &lt; l2.val) p.next = l1 l1 = l1.next else p.next = l2 l2 = l2.next end p = p.next end if (!l1.nil?) p.next = l1 end if (!l2.nil?) p.next = l2 end dummyhead.next end", 
+            "tags": "Blog", 
+            "loc": "./merge-two-sorted-lists.html"
+        },
+        {
+            "title": "Two sum", 
+            "text":"In order to prepare myself in a better way, I&#39;ve started doing problems on Leetcode. Here&#39;s starting with first one - Given an array of integers, return indices of the two numbers such that they add up to a specific target. For e.g. Given nums = [2, 7, 11, 15], target = 9, Because nums[0] + nums[1] = 2 + 7 = 9, return [0, 1]. Like every other problem, this could be solved by multiple approaches. My approach is using one hash table. This way when we iterate and insert elements into the table, we also look back to check if current element&#39;s complement already exists in the table. If it exists, we have found a solution and return immediately. # Time complexity: O(n) # Space complexity: O(n) def two_sum(nums, target) nums_hash = {} nums.each_with_index do |i, ix| if (nums_hash.has_value? (target - i)) return [nums_hash.key(target - i), ix] end nums_hash[ix] = i end end", 
+            "tags": "Blog", 
+            "loc": "./two-sum.html"
+        },
+        {
+            "title": "Matrix Spiral Print", 
+            "text":"Given a 2D array (matrix), print all elements in a clockwise (spiral) manner # Time complexity: O(n*m) # Space complexity: O(1) def matrix_spiral matx topRow = 0 btmRow = m-1 leftCol = 0 rightCol = n-1 while (topRow &lt;= btmRow &amp;&amp; leftCol &lt;= rightCol): # print the next top row (leftCol..rightCol).each do |i| print matx[topRow][i] end topRow++ # print the next right hand side column (topRow..btmRow).each do |i| print matx[i][rightCol] end rightCol-- # print the next bottom row if (topRow &lt;= btmRow) (rightCol..leftCol).each do |i| print matx[btmRow][i] end btmRow-- end # print the next left hand side column if (leftCol &lt;= rightCol) (btmRow..topRow).each do |i| print matx[i][leftCol] end leftCol++ end end end", 
+            "tags": "Blog", 
+            "loc": "./matrix-spiral-print.html"
+        },
+        {
+            "title": "Delete a node from Linked List", 
+            "text":"Supposed the linked list is 1 -&gt; 2 -&gt; 3 -&gt; 4 and you are given the third node with value 3, the linked list should become 1 -&gt; 2 -&gt; 4 after calling your function. We can traverse the list from the beginning until we encounter the node to delete. But in this situation, we don&#39;t know where the head of the list is, we only have a reference to the node to delete. The usual way of deleting a node node from a linked list is to modify the next pointer of the node before it, to point to the node after it. So we take the @value and @next from the input node&#39;s next node and copy them into the input node. Now the input node&#39;s previous node effectively skips the input node&#39;s old value! # Time complexity: O(1) # Space complexity: O(1) def delete_node(node_to_delete) # Getting next node which we want to move to next_node = node_to_delete.next if next_node # Replace value and pointer with next_node&#39;s value # and pointer node_to_delete.value = next_node.value node_to_delete.next = next_node.next else raise &#34;Can&#39;t delete the last node.&#34; end end", 
+            "tags": "Blog", 
+            "loc": "./delete-a-node-from-linked-list.html"
+        },
+        {
+            "title": "Reverse a Linked List", 
+            "text":"Algorithm and Data structures have been one of my weak point for quite some time now. And after working for more than 6 years a lot of these are forgotten. Past few days have been brushing up my skills and will be documenting here. Starting with Linked list, here&#39;s how to reverse a linked list. Assume that we have linked list 1 → 2 → 3, we would like to change it to 1 ← 2 ← 3. A simpler way to come up with solution is by iterative way. We can traversing the list, change the current node&#39;s next pointer to point to its previous element. Since a node does not have reference to its previous node, you must store its previous element beforehand. You also need another pointer to store the next node before changing the reference. Do not forget to return the new head reference at the end! # Time complexity: O(n) # Space complexity: O(1) def reverse(head_of_list) current = head_of_list previous = nil next_node = nil # until we have &#39;fallen off&#39; the end of the list while current # copy a pointer to the next element # before we overwrite current.next next_node = current.next # reverse the &#39;next&#39; pointer current.next = previous # step forward in the list previous = current current = next_node end return previous end", 
+            "tags": "Blog", 
+            "loc": "./reverse-a-linked-list.html"
+        },
+        {
+            "title": "Convert binary data to image in ColdFusion", 
+            "text":"Converting binary data to any image format has been made pretty easy in ColdFusion &lt;cfset myImage = ImageReadBase64(&#34;data:image/jpg;base64,#toBase64(binaryPhoto)#&#34;)&gt; As above, binary data first has to be converted to base 64 using method tobase64, which can be further converted to required format using ColdFusion supported method ImageReadBase64.", 
+            "tags": "Blog", 
+            "loc": "./convert-binary-data-to-image-in-coldfusion.html"
+        },
+        {
+            "title": "How to resolve fatal: remote origin already exists", 
+            "text":"The error message indicates, there is already a remote configured with the same name. So you can either add the new remote with a different name or update the existing one if you don&#39;t need it. First of all Github has a good documentation on renaming a remote to help with this issue. Check your remote repositories that you&#39;re connected to git remote -v This should return a list in following format origin git@github.com:github/git-reference.git (fetch) origin git@github.com:github/git-reference.git (push) That might help you figure out what the original &#39;origin&#39; pointed to. At this moment you could follow either of the below methods to resolve this error based on your requirements. Remove the origin and your new repository as in git remote rm origin git remote add origin newrepo-url If you want to keep the remote connection that you see with the -v, but still want to follow the workflow without having to remember &#39;github&#39; (or some other name) for your repo, you can rename your other repository with the command: git remote rename [current name] [new name] as in: git remote rename origin oldreponame Once done, you should be able to change origin to new repository with git remote add origin newrepo-url You could also use a new name for remote url as git remote add github newrepo-url Remember though, everywhere now onwards you&#39;d be using github as your remote name. For example git push origin master should now be git push github master.", 
+            "tags": "Blog", 
+            "loc": "./how-to-resolve-fatal-remote-origin-already-exists.html"
+        },
+        {
+            "title": "Get image info in ColdFusion", 
+            "text":"The following example shows how you can get an image’s information (width, height, alpha, etc) using the &lt;CFIMAGE&gt; tag in ColdFusion, &lt;cfimage action=&#34;info&#34; source=&#34;../images/BeBatman.jpg&#34; structName=&#34;getImageInfo&#34; /&gt; &lt;cfdump var=&#34;#getImageInfo#&#34; /&gt; or by using the imageInfo() as &lt;cfdump var=&#34;#ImageInfo(myImage)#&#34;&gt; Both of which should you image information in a nice cfdump format.", 
+            "tags": "Blog", 
+            "loc": "./get-image-info-in-coldfusion.html"
+        },
+        {
+            "title": "How to kill process and free port", 
+            "text":"While setting up this blog for once I got into error where it was erroring when I tried to start the server using middleman server command. The error was - Port 4567 is unavailable. Either close the instance of Middleman already running on 4567 or start this Middleman on a new port with: --port=4568 This error meant I messed up in one of my earlier session and may have closed my terminal while server was running. This is easy to resolve, by first finding the PID of the process. $ lsof -wni tcp:4567 Then use the number in the PID column to kill the process (in my case it was 44995) $ kill -9 44995 Hope this helps anyone having issues freeing port.", 
+            "tags": "Blog", 
+            "loc": "./how-to-kill-process-and-free-port.html"
+        },
+        {
+            "title": "Learning Ruby", 
+            "text":"Finally I&#39;ve taken my first paid plunge into learning Ruby language. For the next 7 weeks I&#39;ll be totally immersed in coding Ruby under the guidance of Satish Talim. Even thought I&#39;m using Ruby professionally, I&#39;m far away from even being called an intermediate developer in it. It all started as helping out testers once in a while and soon I fell in love with the language. In order to be more able, I&#39;ve been through Codecademy Ruby track which gave me nice jumpstart to what I was doing at work. I languished at various other sites and tutorials before I decided it&#39;s better to take some professional help and shell out some moolah. I had been reading Ruby Learning blog for some time now and was waiting for their next batch to start. I was still in dilemma between above and Pragmatic Studio. Eventually, it all boiled down to cost of course and since I could afford this without reiterating my monthly budget, it was a clear winner. Along with this, I&#39;m planning to do some code katas at Code Wars and also learn some more stuff at Ruby Monk. I see myself as a better Ruby Developer and a step closer to get that Rails Developer job after this course. Lets hope for the best.", 
+            "tags": "Blog", 
+            "loc": "./learning-ruby.html"
+        },
+        {
+            "title": "30 Days of JavaScript", 
+            "text":"I was first introduced to Javascript back in 2007 for one of my Web Development class. By any standards that was late and even then I wasn&#39;t much interested in learning it. Things changed when I chanced upon JQuery. For me it was that easy way out which I was always searching for. Even though I could write JS code, it was bad and many a times I would resort to JQuery. I could say things have changed for better now and these days I could write far better JS code. And in order to make myself a better programmer, I have decided to finally take a plunge and dedicate this whole month in learning pure JavaScript. I&#39;ll be going along the following route - Eloquent Javascript Professional JavaScript for Web Developers Look into Codecademy JS track Reddit&#39;s JS path I know a month is long time to devote to JS, but my plan is to devote enough time to not miss on any concepts and I&#39;d be trying to cram in JQuery and probably Node.js If all goes well next month it is Meteor.js", 
+            "tags": "Blog", 
+            "loc": "./30-days-of-javascript.html"
+        },
+        {
+            "title": "Hello World", 
+            "text":"My first post using Pelican and me being so called dev, what better way to introduce yourself than to write a ‘Hello World’. My plans at least for this blog is to continue writing regularly and make it more technical oriented.", 
+            "tags": "Blog", 
+            "loc": "./hello-world.html"
+        }        
+    ]
+}

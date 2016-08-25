@@ -20,8 +20,12 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),)
+#LINKS = (('Pelican', 'http://getpelican.com/'),
+#         ('Python.org', 'http://python.org/'),)
+
+LINKS =  (
+    ('Archives', 'archives.html'),
+         )
 
 # Social widget
 SOCIAL = (('Github', 'https://github.com/aniruddhabarapatre'),
@@ -32,13 +36,12 @@ DEFAULT_PAGINATION = 6
 
 # Specify theme
 # THEME = "../pelican-themes/bootstrap"
-# THEME = "pelican-elegant"
+THEME = "/Users/aniruddhabarapatre1/Blogs/GitBlog/pelican-themes/pelican-blue"
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
 TWITTER_USERNAME = "aniruddhabara"
 DISQUS_SITENAME = "pelican-blog"
-# DISQUS_SITENAME = 'pelican-blog.disqus.com'
-# DISQUS_SHORTNAME = 'pelican-blog'
 GOOGLE_ANALYTICS = "UA-83099004-1"
+

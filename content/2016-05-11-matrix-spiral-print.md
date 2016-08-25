@@ -1,7 +1,7 @@
 ---
 title: Matrix Spiral Print
 date: 2016-05-11 21:46 EDT
-tags: CS, Data structures, Arrays
+tags: CS, Data structures, Array
 Category: Blog
 ---
 
